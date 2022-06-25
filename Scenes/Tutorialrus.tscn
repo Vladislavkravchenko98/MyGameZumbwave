@@ -1,0 +1,653 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Sprites/Tutorial1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/pointer/pointerR.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Tutorial5.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/pointer/pointerL_pressed.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/pointer/pointerR_pressed.png" type="Texture" id=6]
+[ext_resource path="res://Ttf/pixel-unicode-regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/pointer/pointerL.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Tutorial2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Tutorial3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Tutoria4.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Tutorial1.gd" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 63
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 89
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 80
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 80
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 90
+font_data = ExtResource( 7 )
+
+[node name="Tutorial1" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.28003
+margin_top = -1.25992
+margin_right = 3.28003
+margin_bottom = -1.25989
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1273.29, 697.523 )
+scale = Vector2( 0.78874, 0.772079 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -599.986
+margin_top = -561.463
+margin_right = -291.986
+margin_bottom = -489.463
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Передвижение"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Sprite"]
+margin_left = -60.1434
+margin_top = -572.27
+margin_right = 194.857
+margin_bottom = -500.27
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Выстрел"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Sprite"]
+margin_left = 181.469
+margin_top = -656.986
+margin_right = 657.469
+margin_bottom = -584.986
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Использовать предмет"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Sprite"]
+margin_left = 263.965
+margin_top = -558.439
+margin_right = 615.965
+margin_bottom = -486.439
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Поднять предмет"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Sprite"]
+margin_left = 329.119
+margin_top = -321.581
+margin_right = 689.119
+margin_bottom = -249.581
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Сменить оружие"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Sprite"]
+margin_left = -710.795
+margin_top = 200.551
+margin_right = -475.795
+margin_bottom = 290.551
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Нажмите"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="Sprite"]
+margin_left = -253.855
+margin_top = 202.28
+margin_right = -18.8553
+margin_bottom = 292.28
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "до"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="Sprite"]
+margin_left = 245.411
+margin_top = 149.483
+margin_right = 745.411
+margin_bottom = 332.483
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Персонаж будет 
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="Sprite"]
+margin_left = 262.725
+margin_top = 378.627
+margin_right = 762.725
+margin_bottom = 654.627
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Персонаж будет 
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="Sprite"]
+margin_left = -707.411
+margin_top = 460.301
+margin_right = -472.411
+margin_bottom = 550.301
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Нажмите"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="Sprite"]
+margin_left = -296.962
+margin_top = 457.435
+margin_right = -61.962
+margin_bottom = 547.435
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "после"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label13" type="Label" parent="Sprite"]
+margin_left = 217.021
+margin_top = 199.394
+margin_right = 717.021
+margin_bottom = 382.394
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "стрелять в сторону,
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label12" type="Label" parent="Sprite"]
+margin_left = 213.239
+margin_top = 251.035
+margin_right = 713.239
+margin_bottom = 527.035
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "в которую смотрит"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label14" type="Label" parent="Sprite"]
+margin_left = 269.494
+margin_top = 482.36
+margin_right = 769.494
+margin_bottom = 758.36
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "в которую идет"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label15" type="Label" parent="Sprite"]
+margin_left = 220.153
+margin_top = 425.529
+margin_right = 720.153
+margin_bottom = 608.529
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "стрелять в сторону,
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label16" type="Label" parent="Sprite"]
+margin_left = -156.0
+margin_top = -739.942
+margin_right = 194.0
+margin_bottom = -638.942
+custom_fonts/font = SubResource( 3 )
+text = "Управление"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 1934.94, 517.796 )
+scale = Vector2( 0.288948, 0.24844 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2( 138.132, 530.457 )
+scale = Vector2( 0.321669, 0.256699 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1267.36, 698.186 )
+scale = Vector2( 0.786443, 0.767294 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite2"]
+margin_left = -134.781
+margin_top = -561.968
+margin_right = 545.219
+margin_bottom = -471.968
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Классический зомби с 1 hp."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Sprite2"]
+margin_left = -196.693
+margin_top = -387.805
+margin_right = 633.307
+margin_bottom = -297.805
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Зомби с мозгами. У него много hp."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Sprite2"]
+margin_left = -278.674
+margin_top = -202.03
+margin_right = 731.326
+margin_bottom = -112.03
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Тоже зомби с могзами, но без футболки:)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Sprite2"]
+margin_left = -172.419
+margin_top = -27.8663
+margin_right = 1067.58
+margin_bottom = 62.1337
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Толстый зомби. Он медленный, "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Sprite2"]
+margin_left = -213.386
+margin_top = 160.231
+margin_right = 666.614
+margin_bottom = 250.231
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Зомби, который стреляет шипами."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Sprite2"]
+margin_left = -89.5075
+margin_top = 320.461
+margin_right = 560.492
+margin_bottom = 410.461
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Взрывающийся зомби."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="Sprite2"]
+margin_left = -2.21649
+margin_top = 487.659
+margin_right = 647.784
+margin_bottom = 577.659
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Это зомби босс."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="Sprite2"]
+margin_left = -21.4988
+margin_top = 41.7993
+margin_right = 1218.5
+margin_bottom = 131.799
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "но у него много hp."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label16" type="Label" parent="Sprite2"]
+margin_left = -156.0
+margin_top = -739.942
+margin_right = 194.0
+margin_bottom = -638.942
+custom_fonts/font = SubResource( 3 )
+text = "Виды зомби"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1269.53, 698.464 )
+scale = Vector2( 0.791268, 0.769071 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="Sprite3"]
+margin_left = -387.314
+margin_top = -405.443
+margin_right = 388.686
+margin_bottom = -291.443
+custom_fonts/font = SubResource( 5 )
+text = "В игре есть два режима"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Sprite3"]
+margin_left = -506.822
+margin_top = 220.098
+margin_right = -71.8215
+margin_bottom = 310.098
+custom_fonts/font = SubResource( 6 )
+text = "Режим на 12 волн."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Sprite3"]
+margin_left = -585.199
+margin_top = 273.385
+margin_right = -10.1985
+margin_bottom = 363.385
+custom_fonts/font = SubResource( 6 )
+text = "Если вы его пройдете,"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Sprite3"]
+margin_left = -626.007
+margin_top = 333.622
+margin_right = 23.9927
+margin_bottom = 423.622
+custom_fonts/font = SubResource( 6 )
+text = "то получите СУПЕР АТАКУ,"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Sprite3"]
+margin_left = -626.007
+margin_top = 403.126
+margin_right = -51.0073
+margin_bottom = 493.126
+custom_fonts/font = SubResource( 6 )
+text = "которая уничтожает всех "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Sprite3"]
+margin_left = -517.92
+margin_top = 458.73
+margin_right = 57.0801
+margin_bottom = 548.73
+custom_fonts/font = SubResource( 6 )
+text = "зомби на экране."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="Sprite3"]
+margin_left = 96.944
+margin_top = 222.414
+margin_right = 671.944
+margin_bottom = 312.414
+custom_fonts/font = SubResource( 6 )
+text = "Бесконечный режим."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="Sprite3"]
+margin_left = 91.1765
+margin_top = 275.701
+margin_right = 666.176
+margin_bottom = 365.701
+custom_fonts/font = SubResource( 6 )
+text = "Как много волн зомби "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="Sprite3"]
+margin_left = 76.5627
+margin_top = 328.988
+margin_right = 651.563
+margin_bottom = 418.988
+custom_fonts/font = SubResource( 6 )
+text = "ты сможешь осилить?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="Sprite3"]
+margin_left = 190.969
+margin_top = 389.225
+margin_right = 765.969
+margin_bottom = 479.225
+custom_fonts/font = SubResource( 6 )
+text = "Проверь себя!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1276.95, 686.078 )
+scale = Vector2( 0.795563, 0.780849 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Sprite5"]
+margin_left = -96.3055
+margin_top = -588.723
+margin_right = 489.694
+margin_bottom = -485.723
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Указатель на замок"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Sprite5"]
+margin_left = -103.025
+margin_top = -387.918
+margin_right = 482.975
+margin_bottom = -284.918
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Указатель на зомби"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Sprite5"]
+margin_left = -103.025
+margin_top = -387.918
+margin_right = 482.975
+margin_bottom = -284.918
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Указатель на зомби"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Sprite5"]
+margin_left = -103.025
+margin_top = -175.329
+margin_right = 482.975
+margin_bottom = -72.329
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Указатель на зомби"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Sprite5"]
+margin_left = -109.744
+margin_top = 77.9589
+margin_right = 556.256
+margin_bottom = 180.959
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Пистолет. Только с ним"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Sprite5"]
+margin_left = -109.744
+margin_top = 141.013
+margin_right = 576.256
+margin_bottom = 244.013
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "можно кидать гранаты "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="Sprite5"]
+margin_left = -111.984
+margin_top = 202.903
+margin_right = 564.016
+margin_bottom = 305.903
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "  и вставать за турель."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="Sprite5"]
+margin_left = -79.6909
+margin_top = 287.776
+margin_right = 596.309
+margin_bottom = 390.776
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Бита. Она разбивает "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="Sprite5"]
+margin_left = -118.268
+margin_top = 340.259
+margin_right = 557.732
+margin_bottom = 443.259
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "баррикады, и ей можно"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="Sprite5"]
+margin_left = 44.7935
+margin_top = 397.306
+margin_right = 720.793
+margin_bottom = 500.306
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "бить зомби."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="Sprite5"]
+margin_left = -132.14
+margin_top = 479.453
+margin_right = 650.86
+margin_bottom = 582.453
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Пустые руки. С ними можно "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label12" type="Label" parent="Sprite5"]
+margin_left = -89.5868
+margin_top = 529.654
+margin_right = 693.413
+margin_bottom = 632.654
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "только быстрее ходить."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 1278.22, 682.774 )
+scale = Vector2( 0.817208, 0.791717 )
+texture = ExtResource( 11 )
+
+[connection signal="released" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_released"]
+[connection signal="released" from="TouchScreenButton3" to="." method="_on_TouchScreenButton3_released"]

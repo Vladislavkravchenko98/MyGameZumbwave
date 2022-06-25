@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/InventItem.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/It/Apteka.png" type="Texture" id=2]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="InventItem" type="TextureRect"]
+margin_left = -0.396851
+margin_top = 0.396851
+margin_right = 99.6031
+margin_bottom = 90.3969
+rect_min_size = Vector2( 100, 90 )
+texture = ExtResource( 2 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amount" type="Label" parent="."]
+anchor_left = 0.00396851
+anchor_right = 0.00396851
+margin_left = 70.5418
+margin_top = 70.1797
+margin_right = 106.542
+margin_bottom = 86.1797
+custom_fonts/font = SubResource( 1 )
+text = "10"
+__meta__ = {
+"_edit_use_anchors_": false
+}

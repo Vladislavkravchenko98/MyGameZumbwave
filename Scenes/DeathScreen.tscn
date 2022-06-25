@@ -1,0 +1,166 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Style/Endscreen_styleboxflat.tres" type="StyleBox" id=1]
+[ext_resource path="res://Scripts/DeathScreen.gd" type="Script" id=2]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/EndScreenButton.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/EndScreen.png" type="Texture" id=5]
+[ext_resource path="res://Style/EndScreen_pressed.tres" type="StyleBox" id=6]
+[ext_resource path="res://Ttf/pixel-unicode-regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 1
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 67
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 72
+outline_size = 1
+font_data = ExtResource( 7 )
+
+[node name="DeathScreen" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1280.0
+margin_top = -720.0
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.101961, 0.0862745, 0.0862745, 0.388235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -231.0
+margin_top = -95.0
+margin_right = 231.0
+margin_bottom = 95.0
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.0
+margin_top = -20.0
+margin_right = 190.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( -57.4631, -69.9424 )
+custom_fonts/font = SubResource( 1 )
+text = "Return to menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button"]
+visible = false
+margin_left = 41.5304
+margin_top = 54.7446
+margin_right = 419.53
+margin_bottom = 130.745
+custom_fonts/font = SubResource( 2 )
+text = "Вернуться в меню"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1275, 321 )
+scale = Vector2( 1.98885, 1.72789 )
+texture = ExtResource( 5 )
+
+[node name="Label2" type="Label" parent="Sprite"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -488.162
+margin_top = -231.24
+margin_right = 1191.84
+margin_bottom = -62.2401
+rect_pivot_offset = Vector2( -57.4631, -69.9424 )
+custom_fonts/font = SubResource( 1 )
+text = "  Zombies, zombies 
+and zombies again. 
+ That's all you saw 
+  before you died."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite"]
+visible = false
+anchor_left = 0.00467288
+anchor_right = 0.00467288
+margin_left = -224.003
+margin_top = -132.0
+margin_right = 275.997
+margin_bottom = -34.9995
+custom_fonts/font = SubResource( 3 )
+text = "Зомби, зомби и еще "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Sprite"]
+visible = false
+margin_left = -217.523
+margin_top = -73.0036
+margin_right = 282.477
+margin_bottom = 23.9964
+custom_fonts/font = SubResource( 3 )
+text = "раз зомби. Это все,"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Sprite"]
+visible = false
+margin_left = -169.198
+margin_top = -15.6726
+margin_right = 330.802
+margin_bottom = 81.3274
+custom_fonts/font = SubResource( 3 )
+text = "что ты увидел "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Sprite"]
+visible = false
+margin_left = -177.376
+margin_top = 41.7106
+margin_right = 322.624
+margin_bottom = 138.71
+custom_fonts/font = SubResource( 3 )
+text = "перед смертью."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]

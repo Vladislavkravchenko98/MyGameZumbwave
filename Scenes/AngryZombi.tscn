@@ -1,0 +1,129 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Sprites/Runzombi/L/3.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Runzombi/R/3.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Runzombi/L/1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Runzombi/D/3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Runzombi/D/4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Runzombi/L/2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Runzombi/U/1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Runzombi/U/2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Runzombi/U/3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Runzombi/D/2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Runzombi/R/1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Runzombi/L/4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Runzombi/D/1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Runzombi/R/2.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Runzombi/U/4.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Runzombi/R/4.png" type="Texture" id=16]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends KinematicBody2D
+
+var speed = 70
+var stands = true
+var destination = Vector2()
+var velocity = Vector2()
+
+
+func _process(delta):
+	if velocity:
+		move_and_slide(velocity)
+		position.x = clamp(position.x, 0, 5000)
+		position.y = clamp(position.y, 0, 5000)
+	wander()
+
+func set_destination(dest):
+	destination = dest
+	velocity = (destination - position).normalized() * speed
+	stands = false
+	
+func cancel_movement():
+	velocity = Vector2()
+	destination = Vector2()
+	$StandingTimer.start(2)
+	
+func wander():
+	var pos = position
+	if stands:
+		randomize()
+		
+		var x = int(rand_range(pos.x - 50, pos.x + 50))
+		var y = int(rand_range(pos.x - 50, pos.x + 50))
+		
+		x = clamp(x, 0, 5000)
+		y = clamp(y, 0, 5000)
+		
+		set_destination(Vector2(x, y))
+	
+	
+	
+	
+
+func _on_StandingTimer_timeout():
+	stands = true
+	pass # Replace with function body.
+"
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "idleD",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "U",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "D",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "idleU",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "L",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "R",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idleL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "idleR",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 71.3623, 112.403 )
+
+[node name="AngryZombi" type="KinematicBody2D"]
+position = Vector2( 60.3212, 73.0204 )
+script = SubResource( 1 )
+
+[node name="animz" type="AnimatedSprite" parent="."]
+position = Vector2( 29.9817, 50.9736 )
+scale = Vector2( 1.56909, 1.72819 )
+frames = SubResource( 2 )
+animation = "idleD"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 27.4241, 48.5444 )
+shape = SubResource( 3 )
+
+[node name="StandingTimer" type="Timer" parent="."]
+[connection signal="timeout" from="StandingTimer" to="." method="_on_StandingTimer_timeout"]

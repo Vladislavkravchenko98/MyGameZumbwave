@@ -1,0 +1,29 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/alive/2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/alive/1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/alive/7.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/alive/4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/alive/3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/alive/6.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Alivemore.gd" type="Script" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Alive",
+"speed": 3.0
+} ]
+
+[node name="Alive" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+script = ExtResource( 7 )
+
+[node name="Anim" type="AnimatedSprite" parent="Sprite"]
+scale = Vector2( 1.44572, 1.47531 )
+frames = SubResource( 1 )
+animation = "Alive"
+frame = 4
+playing = true

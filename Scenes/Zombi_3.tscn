@@ -1,0 +1,268 @@
+[gd_scene load_steps=49 format=2]
+
+[ext_resource path="res://Scripts/Zombi_3.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Men2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Runzombi_4/L/3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Runzombi_4/U/1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Runzombi_4/L/4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Runzombi_4/R/4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Runzombi_4/U/2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Runzombi_4/U/4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Runzombi_4/D/3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Runzombi_4/L/1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Runzombi_4/D/1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Runzombi_4/R/1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Runzombi_4/U/3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/DIEZOMBI_3/3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/DIEZOMBI_3/1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Runzombi_4/D/2.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/DIEZOMBI_3/4.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/DIEZOMBI_3/2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/HP/StickPlayer.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/HP/HPZombi.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/DIEZOMBI_3/LEFT/2.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/DIEZOMBI_3/LEFT/1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/DIEZOMBI_3/LEFT/3.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Runzombi_4/D/4.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/alive/4.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/alive/5.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/alive/6.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/DIEZOMBI_3/LEFT/4.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/alive/3.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/alive/1.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/alive/2.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Zidle.png" type="Texture" id=32]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "dieL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 16 ), ExtResource( 9 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "D",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "Zidle",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "dieR",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "L",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Z",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "R",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "U",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 126.088
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 103.529, 56.8015 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 75.2208
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 52.1489, 95.9565 )
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 92.6809
+height = 11.3374
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 53.0272
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 71.2822, 25.1245 )
+
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 77.638
+height = 24.4536
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 64.2524, 34.541 )
+
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 50.994
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 126.736, 49.3364 )
+
+[sub_resource type="CapsuleShape2D" id=13]
+radius = 80.7355
+height = 0.0
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 8.31738, 97.5669 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 37.4619, 44.3658 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 64.4281, 85.8005 )
+
+[node name="Zombi" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+
+[node name="Anim" type="AnimatedSprite" parent="." index="0"]
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "Zidle"
+playing = true
+
+[node name="Coll" type="CollisionShape2D" parent="." index="1"]
+visible = false
+position = Vector2( -12.8929, 20.818 )
+shape = SubResource( 2 )
+
+[node name="Coll2" type="CollisionShape2D" parent="." index="2"]
+visible = false
+position = Vector2( -11.3265, 146.301 )
+shape = SubResource( 3 )
+
+[node name="Coll3" type="CollisionShape2D" parent="." index="3"]
+visible = false
+position = Vector2( -10.3826, -162.347 )
+shape = SubResource( 4 )
+
+[node name="StandingTimer" type="Timer" parent="." index="4"]
+
+[node name="Timer" type="Timer" parent="." index="5"]
+
+[node name="HP_bar" parent="." index="6"]
+visible = false
+margin_left = -103.0
+margin_top = -347.674
+margin_right = 92.0
+margin_bottom = -262.674
+texture_over = ExtResource( 20 )
+texture_progress = ExtResource( 19 )
+
+[node name="HitBox" parent="." index="7"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
+visible = false
+shape = SubResource( 5 )
+
+[node name="BiteArea" type="Area2D" parent="." index="8"]
+scale = Vector2( 1.50926, 1.67857 )
+
+[node name="DU1" type="CollisionShape2D" parent="BiteArea" index="0"]
+visible = false
+position = Vector2( -8.75551, 20.3977 )
+shape = SubResource( 6 )
+
+[node name="DU2" type="CollisionShape2D" parent="BiteArea" index="1"]
+visible = false
+position = Vector2( -7.03136, -93.3435 )
+shape = SubResource( 7 )
+
+[node name="DU3" type="CollisionShape2D" parent="BiteArea" index="2"]
+visible = false
+position = Vector2( -8.18088, 98.2991 )
+shape = SubResource( 8 )
+
+[node name="L1" type="CollisionShape2D" parent="BiteArea" index="3"]
+visible = false
+position = Vector2( -14.664, 19.2079 )
+rotation = 0.380482
+shape = SubResource( 9 )
+
+[node name="L2" type="CollisionShape2D" parent="BiteArea" index="4"]
+visible = false
+position = Vector2( -29.0814, 97.7407 )
+shape = SubResource( 10 )
+
+[node name="L3" type="CollisionShape2D" parent="BiteArea" index="5"]
+visible = false
+position = Vector2( 7.46724, -96.4852 )
+shape = SubResource( 11 )
+
+[node name="R1" type="CollisionShape2D" parent="BiteArea" index="6"]
+visible = false
+position = Vector2( 6.35217, 17.9021 )
+rotation = -0.507891
+shape = SubResource( 9 )
+
+[node name="R2" type="CollisionShape2D" parent="BiteArea" index="7"]
+visible = false
+position = Vector2( 18.3997, 91.2172 )
+shape = SubResource( 10 )
+
+[node name="R3" type="CollisionShape2D" parent="BiteArea" index="8"]
+visible = false
+position = Vector2( -15.8304, -97.1539 )
+shape = SubResource( 11 )
+
+[node name="Timerdie" type="Timer" parent="." index="9"]
+
+[node name="DIE" type="CollisionShape2D" parent="." index="10"]
+visible = false
+position = Vector2( -4.55445, 66.2467 )
+shape = SubResource( 12 )
+disabled = true
+
+[node name="Timer3" type="Timer" parent="." index="11"]
+
+[node name="Coll_Alive" type="CollisionShape2D" parent="." index="12"]
+visible = false
+position = Vector2( -10.2422, 2.59239 )
+shape = SubResource( 13 )
+
+[node name="Timer_Barr_Chain" type="Timer" parent="." index="13"]
+
+[node name="CollR" type="CollisionShape2D" parent="." index="14"]
+visible = false
+position = Vector2( 95.0349, 86.5451 )
+shape = SubResource( 14 )
+disabled = true
+
+[node name="CollL" type="CollisionShape2D" parent="." index="15"]
+visible = false
+position = Vector2( -25.1921, 52.7799 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 15 )
+disabled = true
+
+[node name="CollL2" type="CollisionShape2D" parent="." index="16"]
+visible = false
+position = Vector2( -8.95293, -157.047 )
+shape = SubResource( 16 )
+disabled = true
+
+[connection signal="timeout" from="StandingTimer" to="." method="_on_StandingTimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="area_entered" from="BiteArea" to="." method="_on_BiteArea_area_entered"]
+[connection signal="area_exited" from="BiteArea" to="." method="_on_BiteArea_area_exited"]
+[connection signal="timeout" from="Timerdie" to="." method="_on_Timerdie_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]
+[connection signal="timeout" from="Timer_Barr_Chain" to="." method="_on_Timer_Barr_Chain_timeout"]

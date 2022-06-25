@@ -1,0 +1,255 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Sprites/pointer/pointerL.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/pointer/pointerR.png" type="Texture" id=2]
+[ext_resource path="res://Ttf/3d-thirteen-pixel-fonts-regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/Button7.gd" type="Script" id=4]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/forshoplvl/plus2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/forshoplvl/plus1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/pointer/pointerL_pressed.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/pointer/pointerR_pressed.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Button4.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/forshoplvl/map2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/forshoplvl/map1.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/Button11.gd" type="Script" id=13]
+[ext_resource path="res://Style/Shoplvl_Button.tres" type="StyleBox" id=14]
+[ext_resource path="res://Style/Shoplvl_pressed.tres" type="StyleBox" id=15]
+[ext_resource path="res://Scripts/Shoplvl3.gd" type="Script" id=16]
+[ext_resource path="res://Sprites/forshoplvl/warningicon.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/forshoplvl/close_button1.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/forshoplvl/close_button2.png" type="Texture" id=19]
+[ext_resource path="res://Music/Button2.wav" type="AudioStream" id=20]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.262745, 0.243137, 0.258824, 1 )
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color( 0.0666667, 0.356863, 0.521569, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0666667, 0.356863, 0.521569, 1 )
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color( 0.262745, 0.243137, 0.258824, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="DynamicFont" id=4]
+size = 138
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 45
+outline_size = 1
+font_data = ExtResource( 5 )
+
+[node name="Shoplvl3" type="Node2D"]
+script = ExtResource( 16 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 2.1189
+margin_right = 2561.12
+margin_bottom = 1436.0
+color = Color( 0.117647, 0.4, 0.490196, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 812.705
+margin_top = 649.795
+margin_right = 1052.7
+margin_bottom = 697.795
+custom_fonts/font = SubResource( 1 )
+text = "1000$"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PointerL" type="TouchScreenButton" parent="."]
+position = Vector2( 24.755, 585.925 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 8 )
+script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PointerL"]
+stream = ExtResource( 20 )
+
+[node name="PointerR" type="TouchScreenButton" parent="."]
+position = Vector2( 2233.16, 587.298 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 9 )
+script = ExtResource( 13 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PointerR"]
+stream = ExtResource( 20 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 815.083
+margin_top = 1180.39
+margin_right = 1055.08
+margin_bottom = 1228.39
+custom_fonts/font = SubResource( 1 )
+text = "10000$"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 1207.0
+margin_top = 44.0
+margin_right = 1387.0
+margin_bottom = 143.0
+custom_fonts/font = SubResource( 1 )
+text = " Shop
+(maps)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 1576.77, 810.528 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1576.53, 317.069 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 2043.0
+margin_right = 2563.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coins" type="Label" parent="."]
+margin_left = 2062.73
+margin_top = 18.5371
+margin_right = 2392.73
+margin_bottom = 66.5371
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Coins: 1000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1083.29
+margin_top = 1267.14
+margin_right = 1573.29
+margin_bottom = 1394.14
+custom_styles/hover = ExtResource( 15 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = ExtResource( 15 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = SubResource( 3 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelButton" type="Label" parent="Button"]
+margin_left = 148.44
+margin_top = 41.1
+margin_right = 364.44
+margin_bottom = 89.1
+custom_fonts/font = SubResource( 1 )
+text = "Return"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 688.651
+margin_top = 540.326
+margin_right = 1514.65
+margin_bottom = 713.326
+custom_fonts/font = SubResource( 4 )
+text = "Village"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 521.256
+margin_top = 1059.39
+margin_right = 1381.25
+margin_bottom = 1232.39
+custom_fonts/font = SubResource( 4 )
+text = "Shooting speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 895.247, 353.861 )
+scale = Vector2( 0.441328, 0.402412 )
+texture = ExtResource( 12 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 892.068, 884.652 )
+scale = Vector2( 0.369187, 0.381885 )
+texture = ExtResource( 11 )
+
+[node name="Warning" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1304.43, 643.722 )
+z_index = 3
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="Warning"]
+margin_left = -260.51
+margin_top = 3.77551
+margin_right = 237.49
+margin_bottom = 91.7755
+custom_fonts/font = SubResource( 5 )
+text = "Not enough money"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+margin_right = 2560.0
+margin_bottom = 1441.0
+color = Color( 0, 0, 0, 0.815686 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1500.84, 435.584 )
+z_index = 4
+normal = ExtResource( 18 )
+pressed = ExtResource( 19 )
+
+[connection signal="released" from="PointerL" to="PointerL" method="_on_PointerL_released"]
+[connection signal="released" from="PointerR" to="PointerR" method="_on_PointerR_released"]
+[connection signal="released" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_released"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]
+[connection signal="released" from="Close" to="." method="_on_Close_released"]

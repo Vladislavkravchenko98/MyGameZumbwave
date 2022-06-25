@@ -1,0 +1,507 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Sprites/pointer/pointerL.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/pointer/pointerR.png" type="Texture" id=2]
+[ext_resource path="res://Ttf/3d-thirteen-pixel-fonts-regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/PointerRrusrus.gd" type="Script" id=4]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/forshoplvl/plus2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/forshoplvl/plus1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/pointer/pointerL_pressed.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/pointer/pointerR_pressed.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Button4.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/PointerLrusrus.gd" type="Script" id=11]
+[ext_resource path="res://Style/Shoplvl_Button.tres" type="StyleBox" id=12]
+[ext_resource path="res://Style/Shoplvl_pressed.tres" type="StyleBox" id=13]
+[ext_resource path="res://Scripts/Shoplvl2rus.gd" type="Script" id=14]
+[ext_resource path="res://Sprites/forshoplvl/warningicon.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/forshoplvl/close_button1.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/forshoplvl/close_button2.png" type="Texture" id=17]
+[ext_resource path="res://Music/Button2.wav" type="AudioStream" id=18]
+[ext_resource path="res://Music/Button1.wav" type="AudioStream" id=19]
+[ext_resource path="res://Ttf/pixel-unicode-regular.ttf" type="DynamicFontData" id=20]
+[ext_resource path="res://Ttf/5mikropix-regular.ttf" type="DynamicFontData" id=21]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 80
+font_data = ExtResource( 20 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0666667, 0.356863, 0.521569, 1 )
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color( 0.262745, 0.243137, 0.258824, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="DynamicFont" id=6]
+size = 80
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 138
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 45
+outline_size = 1
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 80
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 90
+font_data = ExtResource( 21 )
+
+[node name="Shoplvl2" type="Node2D"]
+script = ExtResource( 14 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.12231
+margin_top = 3.36743
+margin_right = 2560.12
+margin_bottom = 1439.37
+color = Color( 0.117647, 0.4, 0.490196, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1607.0
+margin_top = 264.799
+margin_right = 1919.0
+margin_bottom = 312.799
+custom_fonts/font = SubResource( 1 )
+text = "<0/10>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PointerL" type="TouchScreenButton" parent="."]
+position = Vector2( 24.755, 585.925 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 8 )
+script = ExtResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PointerL"]
+stream = ExtResource( 19 )
+
+[node name="PointerR" type="TouchScreenButton" parent="."]
+position = Vector2( 2233.16, 587.298 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 9 )
+script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PointerR"]
+stream = ExtResource( 19 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1630.6
+margin_top = 422.075
+margin_right = 1942.6
+margin_bottom = 470.075
+custom_fonts/font = SubResource( 1 )
+text = "<0/8>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 1606.6
+margin_top = 769.217
+margin_right = 1846.6
+margin_bottom = 817.217
+custom_fonts/font = SubResource( 1 )
+text = "<0/10>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 1634.6
+margin_top = 942.93
+margin_right = 1874.6
+margin_bottom = 990.93
+rect_pivot_offset = Vector2( 182.695, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "<0/4>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+visible = false
+margin_left = 894.546
+margin_top = 69.7668
+margin_right = 1794.55
+margin_bottom = 168.767
+custom_fonts/font = SubResource( 1 )
+text = "                           Shop
+(player characteristics)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label17" type="Label" parent="."]
+margin_left = 1227.04
+margin_top = 32.0917
+margin_right = 1429.04
+margin_bottom = 111.092
+custom_fonts/font = SubResource( 2 )
+text = "Магазин"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label18" type="Label" parent="."]
+margin_left = 1004.96
+margin_top = 73.6222
+margin_right = 2410.96
+margin_bottom = 152.622
+custom_fonts/font = SubResource( 2 )
+text = "(характеристки персонажа)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1953, 248.129 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 1953, 760.567 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2( 1953, 419.382 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+position = Vector2( 1953, 934.301 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 2043.0
+margin_right = 2563.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coins" type="Label" parent="."]
+margin_left = 2211.86
+margin_top = 18.5371
+margin_right = 2541.86
+margin_bottom = 66.5371
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = ": 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label19" type="Label" parent="."]
+margin_left = 2050.1
+margin_top = -11.3265
+margin_right = 2232.1
+margin_bottom = 91.6735
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Монет"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1083.29
+margin_top = 1267.14
+margin_right = 1573.29
+margin_bottom = 1394.14
+custom_styles/hover = ExtResource( 13 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 13 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = SubResource( 5 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 120.816
+margin_top = 9.43872
+margin_right = 390.816
+margin_bottom = 99.4387
+custom_fonts/font = SubResource( 6 )
+text = "вернуться"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+visible = false
+margin_left = 737.7
+margin_top = 260.169
+margin_right = 1563.7
+margin_bottom = 433.169
+custom_fonts/font = SubResource( 7 )
+text = "Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="."]
+margin_left = 1620.23
+margin_top = 323.277
+margin_right = 1817.23
+margin_bottom = 421.277
+custom_fonts/font = SubResource( 8 )
+text = "1000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label12" type="Label" parent="."]
+margin_left = 1620.23
+margin_top = 480.24
+margin_right = 1817.23
+margin_bottom = 578.24
+custom_fonts/font = SubResource( 8 )
+text = "1000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label13" type="Label" parent="."]
+margin_left = 1620.23
+margin_top = 823.999
+margin_right = 1817.23
+margin_bottom = 921.999
+custom_fonts/font = SubResource( 8 )
+text = "1000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label14" type="Label" parent="."]
+margin_left = 1620.23
+margin_top = 997.0
+margin_right = 1817.23
+margin_bottom = 1095.0
+custom_fonts/font = SubResource( 8 )
+text = "1000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 1629.6
+margin_top = 585.928
+margin_right = 1941.6
+margin_bottom = 633.928
+custom_fonts/font = SubResource( 1 )
+text = "<0/5>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label16" type="Label" parent="."]
+margin_left = 1620.23
+margin_top = 641.875
+margin_right = 1817.23
+margin_bottom = 739.875
+custom_fonts/font = SubResource( 8 )
+text = "1000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+position = Vector2( 1953, 588.652 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="Warning" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1304.43, 643.722 )
+z_index = 3
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="Warning"]
+visible = false
+margin_left = -289.019
+margin_top = -67.4964
+margin_right = 264.981
+margin_bottom = 169.504
+custom_fonts/font = SubResource( 9 )
+text = " Not enough money
+                     or
+          the limit has 
+      been exceeded"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Warning"]
+margin_left = -266.172
+margin_top = -111.357
+margin_right = 306.828
+margin_bottom = 2.64349
+custom_fonts/font = SubResource( 10 )
+text = "Не хватает денег"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Warning"]
+margin_left = -94.3876
+margin_top = -52.8363
+margin_right = 478.613
+margin_bottom = 61.1637
+custom_fonts/font = SubResource( 10 )
+text = "или"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Warning"]
+margin_left = -290.713
+margin_top = 3.79608
+margin_right = 282.287
+margin_bottom = 117.796
+custom_fonts/font = SubResource( 10 )
+text = "превышен максимум"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Warning"]
+margin_left = -218.979
+margin_top = 73.6426
+margin_right = 354.021
+margin_bottom = 187.643
+custom_fonts/font = SubResource( 10 )
+text = "по количеству "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+margin_right = 2560.0
+margin_bottom = 1441.0
+color = Color( 0, 0, 0, 0.815686 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1500.84, 435.584 )
+z_index = 4
+normal = ExtResource( 16 )
+pressed = ExtResource( 17 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[node name="Label20" type="Label" parent="."]
+margin_left = 778.337
+margin_top = 233.225
+margin_right = 1320.34
+margin_bottom = 425.225
+custom_fonts/font = SubResource( 11 )
+text = "Скорость "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label21" type="Label" parent="."]
+margin_left = 652.827
+margin_top = 382.02
+margin_right = 1346.83
+margin_bottom = 574.02
+custom_fonts/font = SubResource( 11 )
+text = "Скорость пули"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label22" type="Label" parent="."]
+margin_left = 541.317
+margin_top = 547.142
+margin_right = 1453.32
+margin_bottom = 739.142
+custom_fonts/font = SubResource( 11 )
+text = "Скорость стрельбы"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label23" type="Label" parent="."]
+margin_left = 637.571
+margin_top = 728.59
+margin_right = 1257.57
+margin_bottom = 920.59
+custom_fonts/font = SubResource( 11 )
+text = "Жизни (+10 HP)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label24" type="Label" parent="."]
+margin_left = 462.174
+margin_top = 906.926
+margin_right = 1564.17
+margin_bottom = 1098.93
+custom_fonts/font = SubResource( 11 )
+text = "Дальность полета пули"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="released" from="PointerL" to="PointerL" method="_on_PointerL_released"]
+[connection signal="released" from="PointerR" to="PointerR" method="_on_PointerR_released"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
+[connection signal="released" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_released"]
+[connection signal="released" from="TouchScreenButton3" to="." method="_on_TouchScreenButton3_released"]
+[connection signal="released" from="TouchScreenButton5" to="." method="_on_TouchScreenButton5_released"]
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]
+[connection signal="released" from="TouchScreenButton4" to="." method="_on_TouchScreenButton4_released"]
+[connection signal="released" from="Close" to="." method="_on_Close_released"]

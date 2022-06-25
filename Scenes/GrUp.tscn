@@ -1,0 +1,70 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/Boom/3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/GrUp.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Gr_Anim/1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Gr_Anim/for_up.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Gr_Anim/3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Gr_Anim/for_down.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Boom/2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Boom/1.6.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Boom/1.7.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.43427, 5.28708 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 126.226
+
+[node name="Gr" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="Anim" type="AnimatedSprite" parent="."]
+scale = Vector2( 1.33965, 1.40647 )
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -20.9393, 14.5 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 3 )
+
+[node name="TimerBoom" type="Timer" parent="."]
+
+[node name="TimerEnd" type="Timer" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -3 )
+shape = SubResource( 4 )
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_Plasma_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="TimerBoom" to="." method="_on_TimerBoom_timeout"]
+[connection signal="timeout" from="TimerEnd" to="." method="_on_TimerEnd_timeout"]

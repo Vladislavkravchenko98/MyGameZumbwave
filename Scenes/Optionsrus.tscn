@@ -1,0 +1,192 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/Buttons/Options/Options2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Buttons/Options/Options1.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Options.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Buttons/Options/Options3.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Button4.gd" type="Script" id=6]
+[ext_resource path="res://Style/Shoplvl_pressed.tres" type="StyleBox" id=7]
+[ext_resource path="res://Style/Shoplvl_Button.tres" type="StyleBox" id=8]
+[ext_resource path="res://Scenes/Shoplvl_Button.tres" type="StyleBox" id=9]
+[ext_resource path="res://Music/Button1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Ttf/pixel-unicode-regular.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 80
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 150
+font_data = ExtResource( 11 )
+
+[node name="Options" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2559.0
+margin_bottom = 1436.0
+color = Color( 0.117647, 0.490196, 0.490196, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 1030.03
+margin_top = 43.7266
+margin_right = 1461.03
+margin_bottom = 133.727
+custom_fonts/font = SubResource( 1 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_left = 906.486
+margin_top = 413.721
+margin_right = 1166.49
+margin_bottom = 493.721
+custom_fonts/font = SubResource( 2 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+margin_left = 908.168
+margin_top = 775.307
+margin_right = 1968.17
+margin_bottom = 855.307
+custom_fonts/font = SubResource( 2 )
+text = "Pointer to the castle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 626, 442 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 626, 442 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 626, 822 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 626, 822 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 520, 338 )
+scale = Vector2( 0.35, 0.356667 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 5 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 518, 720 )
+scale = Vector2( 0.35, 0.356667 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1029.29
+margin_top = 1267.14
+margin_right = 1519.29
+margin_bottom = 1394.14
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelButton" type="Label" parent="Button"]
+visible = false
+margin_left = 148.44
+margin_top = 41.1
+margin_right = 364.44
+margin_bottom = 89.1
+custom_fonts/font = SubResource( 3 )
+text = "Return"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 120.816
+margin_top = 9.43872
+margin_right = 390.816
+margin_bottom = 99.4387
+custom_fonts/font = SubResource( 5 )
+text = "вернуться"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 934.446
+margin_top = 349.623
+margin_right = 1318.45
+margin_bottom = 545.623
+custom_fonts/font = SubResource( 4 )
+text = "Музыка"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 939.138
+margin_top = 745.862
+margin_right = 1913.14
+margin_bottom = 941.862
+custom_fonts/font = SubResource( 4 )
+text = "Указатель на замок"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 1013.73
+margin_top = -2.11887
+margin_right = 1556.73
+margin_bottom = 193.881
+custom_fonts/font = SubResource( 4 )
+text = "Настройки"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
+[connection signal="released" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_released"]
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]

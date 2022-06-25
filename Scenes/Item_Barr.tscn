@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Item_Barr.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Items/Apteka.png" type="Texture" id=2]
+
+[node name="Item" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1.74286, 1.62857 )
+texture = ExtResource( 2 )

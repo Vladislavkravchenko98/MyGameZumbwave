@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Wave2.gd" type="Script" id=1]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 186
+font_data = ExtResource( 7 )
+
+[node name="Wave" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.51978
+margin_top = -1.25992
+margin_right = 2.51978
+margin_bottom = -1.25989
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -993.477
+margin_top = -110.886
+margin_right = 1006.52
+margin_bottom = 89.1137
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0.968627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 11
+custom_constants/shadow_offset_y = 0
+text = "Teleportation in 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = -348.0
+margin_top = 42.0
+margin_right = -177.0
+margin_bottom = 99.0
+tab_size = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

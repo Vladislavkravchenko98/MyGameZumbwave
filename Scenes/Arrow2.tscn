@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Arrow2.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Arrow2.gd" type="Script" id=2]
+
+[node name="Arrow" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.839538, 0.745 )
+z_index = 30
+texture = ExtResource( 1 )

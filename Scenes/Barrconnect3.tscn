@@ -1,0 +1,181 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Sprites/Turrent_more(U).png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Barricade_2/Barricade_L.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Turrent_more.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Turrent_moreR.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Barricade_3RedandGreen/Green.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Barricade_3RedandGreen/Red.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Barrconnect3.gd" type="Script" id=7]
+[ext_resource path="res://Sprites/Turrent_more(D).png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Barricade_2/Barricade_D.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Barricade_2/Barricade_R.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Barricade_2/Barricade_U.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 315.699, 156.578 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 314.939, 155.385 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 144.926, 314.796 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 146.215, 317.284 )
+
+[node name="Barrconnect" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Barr2contact" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barr2contact"]
+position = Vector2( -4.20594, 287.132 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Barr2contactU" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barr2contactU"]
+position = Vector2( -6.56834, -277.298 )
+shape = SubResource( 2 )
+disabled = true
+
+[node name="Barr2contactR" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barr2contactR"]
+position = Vector2( 275, 22 )
+shape = SubResource( 3 )
+disabled = true
+
+[node name="Barr2contactL" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barr2contactL"]
+position = Vector2( -274, 22 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="GreenR" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( 275.604, 21.1585 )
+scale = Vector2( 0.97298, 5.85277 )
+z_index = 21
+texture = ExtResource( 5 )
+
+[node name="GreenL" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( -274.381, 21.1125 )
+scale = Vector2( 0.975885, 5.85996 )
+z_index = 21
+texture = ExtResource( 5 )
+
+[node name="GreenU" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( -6.19635, -277.052 )
+scale = Vector2( 2.1039, 2.90306 )
+z_index = 21
+texture = ExtResource( 5 )
+
+[node name="GreenD" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( -4.38031, 287.889 )
+scale = Vector2( 2.10953, 2.91005 )
+z_index = 21
+texture = ExtResource( 5 )
+
+[node name="RedR" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( 275.728, 21.5734 )
+scale = Vector2( 0.977583, 5.85711 )
+z_index = 21
+texture = ExtResource( 6 )
+
+[node name="RedL" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( -274.374, 21.8484 )
+scale = Vector2( 0.975137, 5.87008 )
+z_index = 21
+texture = ExtResource( 6 )
+
+[node name="RedU" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( -6.38296, -276.932 )
+scale = Vector2( 2.10802, 2.91638 )
+z_index = 21
+texture = ExtResource( 6 )
+
+[node name="RedD" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( -4.54323, 287.889 )
+scale = Vector2( 2.11284, 2.91005 )
+z_index = 21
+texture = ExtResource( 6 )
+
+[node name="D1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0.793701, 220.677 )
+z_index = 18
+texture = ExtResource( 9 )
+
+[node name="D2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1.4166, 289.516 )
+scale = Vector2( 1.561, 1.786 )
+z_index = 19
+texture = ExtResource( 8 )
+
+[node name="L1" type="Sprite" parent="."]
+visible = false
+position = Vector2( -207.003, 27.0609 )
+z_index = 18
+texture = ExtResource( 2 )
+
+[node name="L2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -273.451, 21.2413 )
+scale = Vector2( 1.561, 1.786 )
+z_index = 19
+texture = ExtResource( 3 )
+
+[node name="R1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 205.494, 26.1833 )
+z_index = 18
+texture = ExtResource( 10 )
+
+[node name="R2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 274.768, 21.2546 )
+scale = Vector2( 1.561, 1.786 )
+z_index = 19
+texture = ExtResource( 4 )
+
+[node name="U1" type="Sprite" parent="."]
+visible = false
+position = Vector2( -1, -209.942 )
+z_index = 18
+texture = ExtResource( 11 )
+
+[node name="U2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 4.96829, -279.192 )
+scale = Vector2( 1.561, 1.786 )
+z_index = 19
+texture = ExtResource( 1 )
+
+[connection signal="area_entered" from="Barr2contact" to="." method="_on_Barr2contact_area_entered"]
+[connection signal="area_exited" from="Barr2contact" to="." method="_on_Barr2contact_area_exited"]
+[connection signal="area_entered" from="Barr2contactU" to="." method="_on_Barr2contactU_area_entered"]
+[connection signal="area_exited" from="Barr2contactU" to="." method="_on_Barr2contactU_area_exited"]
+[connection signal="area_entered" from="Barr2contactR" to="." method="_on_Barr2contactR_area_entered"]
+[connection signal="area_exited" from="Barr2contactR" to="." method="_on_Barr2contactR_area_exited"]
+[connection signal="area_entered" from="Barr2contactL" to="." method="_on_Barr2contactL_area_entered"]
+[connection signal="area_exited" from="Barr2contactL" to="." method="_on_Barr2contactL_area_exited"]

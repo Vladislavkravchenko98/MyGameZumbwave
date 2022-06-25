@@ -1,0 +1,185 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Sprites/GAS/GAS_2.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Men2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/HP/StickBarricade.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/HP/HPBarricade.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Gas.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/GAS/GAS.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Home/curb.png" type="Texture" id=7]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 330.983, 177.231 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 249.465, 99.9272 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 202.595, 10 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 130.915, 8.54599 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 126.843, 10.5063 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 393.4, 53.5477 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4.50818, 207.103 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 5.60938, 224.27 )
+
+[sub_resource type="SegmentShape2D" id=10]
+a = Vector2( 360.044, 282.06 )
+b = Vector2( 305.004, 341.687 )
+
+[sub_resource type="SegmentShape2D" id=11]
+a = Vector2( -418.167, 278.237 )
+b = Vector2( -355.482, 344.745 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 174.471, 70.6183 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 19.8633, 162.851 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 86.3806, 164.38 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 23.6855, 22.192 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 224.927, 39.8911 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 406.272, 291.282 )
+
+[node name="Barr" instance=ExtResource( 2 )]
+scale = Vector2( 1.1, 1.1 )
+script = ExtResource( 5 )
+
+[node name="HP_bar" parent="." index="0"]
+visible = false
+margin_left = -75.0
+margin_top = -175.0
+margin_right = 77.9999
+margin_bottom = -114.0
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="HitBox" parent="." index="1"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
+visible = false
+position = Vector2( -14.1601, 174.744 )
+shape = SubResource( 1 )
+
+[node name="BiteArea" type="Area2D" parent="." index="2"]
+scale = Vector2( 1.50926, 1.67857 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BiteArea" index="0"]
+position = Vector2( -21.8596, 73.0438 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BiteArea" index="1"]
+position = Vector2( -25.8319, 191.276 )
+shape = SubResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="." index="3"]
+scale = Vector2( 2, 2 )
+z_index = -2
+texture = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="4"]
+scale = Vector2( 2, 2 )
+z_index = 2
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Sprite" index="0"]
+margin_left = -57.6584
+margin_top = 34.0158
+margin_right = 255.342
+margin_bottom = 138.016
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.572549, 0.72549, 0.588235, 1 )
+text = "GAS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="5"]
+z_index = 3
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2( 175.844, 346.62 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+position = Vector2( -231.772, 345.378 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+position = Vector2( -32.9224, -120.006 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+position = Vector2( 364.123, 54.1993 )
+scale = Vector2( 1.1, 1.1 )
+shape = SubResource( 8 )
+
+[node name="Coll_Alive" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+position = Vector2( -421.007, 50.7321 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="5"]
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="6"]
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" index="7"]
+position = Vector2( 134.461, 12.2312 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" index="8"]
+position = Vector2( 326.503, 110.474 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" index="9"]
+position = Vector2( -323.652, 126.61 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" index="10"]
+position = Vector2( -206.402, 304.252 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="6"]
+position = Vector2( -33.0624, -117.609 )
+shape = SubResource( 16 )
+
+[node name="Sprite3" type="Sprite" parent="." index="7"]
+position = Vector2( -155.808, 52.1009 )
+scale = Vector2( 2, 1.63021 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="." index="8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( -25.4545, 65.4545 )
+shape = SubResource( 17 )
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
+[connection signal="area_entered" from="BiteArea" to="." method="_on_BiteArea_area_entered"]
+[connection signal="area_exited" from="BiteArea" to="." method="_on_BiteArea_area_exited"]

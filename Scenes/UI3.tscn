@@ -1,0 +1,367 @@
+[gd_scene load_steps=49 format=2]
+
+[ext_resource path="res://Scenes/Panel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/UI_Control.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/DeathScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/HealthBar.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Panel_GUN.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Coins.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/Coins.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Panel_Barricade.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/Panel_Barricade.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/Buttons/ButtonA/1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Buttons/ButtonA/2.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/UI3.gd" type="Script" id=13]
+[ext_resource path="res://Sprites/Buttons/Pause/1.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Buttons/Pause/2.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Pause_Menu.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/joystick_my.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Wave.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Arrow2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Sprites/ScrinButton.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/RedScrinButton.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Buttons/ButtonB/1.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Buttons/ButtonB/2.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Buttons/ButtonE/1.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Buttons/ButtonE/2.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Buttons/Joystick/0.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Panel_lvl.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Sprites/BIGREADBUTTON.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/BIGREADBUTTON2.png" type="Texture" id=30]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=31]
+[ext_resource path="res://Scenes/Wave2.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Sprites/SupAttButt2.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/SupAttButt.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/SuperAttack/2.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/SuperAttack/1.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/SuperAttack/4.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/SuperAttack/8.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/SuperAttack/6.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/SuperAttack/9.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/SuperAttack/3.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/SuperAttack/7.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/SuperAttack/5.png" type="Texture" id=43]
+[ext_resource path="res://Music/Button2.wav" type="AudioStream" id=44]
+[ext_resource path="res://Music/Button1.wav" type="AudioStream" id=45]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+font_data = ExtResource( 31 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 35 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 43 ), ExtResource( 39 ), ExtResource( 42 ), ExtResource( 38 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "SuperAttack",
+"speed": 6.0
+} ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 200
+font_data = ExtResource( 31 )
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource( 13 )
+
+[node name="Panel_lvl" parent="." instance=ExtResource( 28 )]
+visible = false
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coins" parent="Control" instance=ExtResource( 7 )]
+margin_left = 2368.0
+margin_top = 122.0
+margin_right = 2368.0
+margin_bottom = 122.0
+script = ExtResource( 8 )
+
+[node name="Panel_GUN" parent="Control" instance=ExtResource( 6 )]
+margin_left = 2330.41
+margin_top = 1238.0
+margin_right = 2330.41
+margin_bottom = 1238.0
+rect_scale = Vector2( 1.5, 1.5 )
+
+[node name="HealthBar" parent="Control" instance=ExtResource( 4 )]
+margin_left = 960.521
+margin_top = -14.7637
+margin_right = 960.521
+margin_bottom = -14.7637
+script = ExtResource( 5 )
+
+[node name="Panel" parent="Control" instance=ExtResource( 1 )]
+margin_left = 823.675
+margin_top = 1164.03
+margin_right = 1466.68
+margin_bottom = 1339.03
+rect_scale = Vector2( 1.5, 1.5 )
+
+[node name="Panel_Barricade" parent="Control" instance=ExtResource( 9 )]
+margin_left = 137.57
+margin_top = 591.521
+margin_right = 137.57
+margin_bottom = 591.521
+rect_scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 10 )
+
+[node name="Wave" parent="Control" instance=ExtResource( 18 )]
+margin_left = 1303.05
+margin_top = 342.885
+margin_right = 1303.05
+margin_bottom = 342.885
+
+[node name="Wave2" parent="Control" instance=ExtResource( 32 )]
+margin_left = 1259.38
+margin_top = 618.805
+margin_right = 1259.38
+margin_bottom = 618.805
+
+[node name="Arrow" parent="Control" instance=ExtResource( 19 )]
+margin_left = 1271.17
+margin_top = 672.139
+margin_right = 1271.17
+margin_bottom = 672.139
+
+[node name="Arrow2" parent="Control" instance=ExtResource( 20 )]
+margin_left = 1255.54
+margin_top = 670.713
+margin_right = 1255.54
+margin_bottom = 670.713
+
+[node name="DeathScreen" parent="Control" instance=ExtResource( 3 )]
+process_priority = -100
+visible = false
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1933, 1077 )
+scale = Vector2( 0.359528, 0.363496 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 12 )
+action = "Shot"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+position = Vector2( 2137, 939 )
+scale = Vector2( 0.333732, 0.339685 )
+normal = ExtResource( 23 )
+pressed = ExtResource( 24 )
+action = "ButtonB"
+
+[node name="Pause_Menu" parent="." instance=ExtResource( 16 )]
+pause_mode = 2
+margin_left = 1267.0
+margin_top = 686.0
+margin_right = 1267.0
+margin_bottom = 686.0
+
+[node name="Pause" type="TouchScreenButton" parent="."]
+pause_mode = 2
+position = Vector2( -34, -2 )
+scale = Vector2( 0.365809, 0.352713 )
+normal = ExtResource( 14 )
+pressed = ExtResource( 15 )
+
+[node name="joystick_my" parent="." instance=ExtResource( 17 )]
+position = Vector2( 357, 1187 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+pause_mode = 1
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 1450.61, 1211.74 )
+scale = Vector2( 0.245461, 0.284562 )
+normal = ExtResource( 21 )
+pressed = ExtResource( 21 )
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+pause_mode = 1
+position = Vector2( 1209.7, 1210.89 )
+scale = Vector2( 0.249179, 0.278834 )
+normal = ExtResource( 21 )
+pressed = ExtResource( 21 )
+
+[node name="Red" type="Sprite" parent="."]
+pause_mode = 1
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 1554.11, 1297.88 )
+scale = Vector2( 0.33029, 0.306179 )
+texture = ExtResource( 22 )
+
+[node name="Red2" type="Sprite" parent="."]
+pause_mode = 1
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 1312.37, 1297.82 )
+scale = Vector2( 0.333332, 0.312501 )
+texture = ExtResource( 22 )
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+pause_mode = 1
+position = Vector2( 967.039, 1211.24 )
+scale = Vector2( 0.247132, 0.284589 )
+normal = ExtResource( 21 )
+pressed = ExtResource( 21 )
+
+[node name="Red3" type="Sprite" parent="."]
+pause_mode = 1
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 1071.8, 1297.02 )
+scale = Vector2( 0.335883, 0.303658 )
+texture = ExtResource( 22 )
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
+pause_mode = 1
+position = Vector2( 50.0485, 246.372 )
+scale = Vector2( 0.235534, 0.321411 )
+normal = ExtResource( 21 )
+pressed = ExtResource( 21 )
+
+[node name="Red4" type="Sprite" parent="."]
+pause_mode = 1
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 153.657, 348.535 )
+scale = Vector2( 0.329713, 0.342809 )
+texture = ExtResource( 22 )
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="."]
+pause_mode = 1
+position = Vector2( 59.396, 484.467 )
+scale = Vector2( 0.227146, 0.325886 )
+normal = ExtResource( 21 )
+pressed = ExtResource( 21 )
+
+[node name="Red5" type="Sprite" parent="."]
+pause_mode = 1
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 153.162, 584.383 )
+scale = Vector2( 0.3256, 0.340857 )
+texture = ExtResource( 22 )
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="."]
+pause_mode = 1
+position = Vector2( 57.9085, 727.682 )
+scale = Vector2( 0.222691, 0.311038 )
+normal = ExtResource( 21 )
+pressed = ExtResource( 21 )
+
+[node name="Red6" type="Sprite" parent="."]
+pause_mode = 1
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 153.595, 823.546 )
+scale = Vector2( 0.328977, 0.341224 )
+texture = ExtResource( 22 )
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="."]
+pause_mode = 1
+position = Vector2( 2359, 903 )
+scale = Vector2( 0.305414, 0.30431 )
+normal = ExtResource( 25 )
+pressed = ExtResource( 26 )
+action = "e_click"
+
+[node name="GunButton" type="TouchScreenButton" parent="."]
+pause_mode = 1
+position = Vector2( 2233.21, 1170.4 )
+scale = Vector2( 0.478116, 0.35032 )
+normal = ExtResource( 27 )
+pressed = ExtResource( 27 )
+
+[node name="BIRREADBUTTON" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 915.7, 824.352 )
+normal = ExtResource( 29 )
+pressed = ExtResource( 30 )
+
+[node name="Label" type="Label" parent="BIRREADBUTTON"]
+margin_left = 210.944
+margin_top = 363.776
+margin_right = 585.944
+margin_bottom = 463.776
+custom_fonts/font = SubResource( 1 )
+text = "PRESS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimSuperAttack" type="AnimatedSprite" parent="."]
+pause_mode = 2
+visible = false
+position = Vector2( 1285, 724 )
+scale = Vector2( 1.31601, 1.25413 )
+z_index = -1
+frames = SubResource( 2 )
+animation = "SuperAttack"
+frame = 3
+
+[node name="TimeSuperA" type="Timer" parent="."]
+pause_mode = 2
+
+[node name="SuAt" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 2249.41, 547.761 )
+scale = Vector2( 0.435962, 0.442511 )
+z_index = -1
+normal = ExtResource( 34 )
+pressed = ExtResource( 33 )
+
+[node name="SuAtoff" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2424.27, 680.089 )
+scale = Vector2( 0.436, 0.443 )
+z_index = -2
+texture = ExtResource( 33 )
+
+[node name="Label" type="Label" parent="SuAtoff"]
+margin_left = -84.8608
+margin_top = -79.7238
+margin_right = 65.1392
+margin_bottom = 120.276
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "9"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerONSUPER" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 45 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 44 )
+
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="released" from="Pause" to="." method="_on_Pause_released"]
+[connection signal="pressed" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_pressed"]
+[connection signal="released" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_released"]
+[connection signal="pressed" from="TouchScreenButton3" to="." method="_on_TouchScreenButton3_pressed"]
+[connection signal="released" from="TouchScreenButton3" to="." method="_on_TouchScreenButton3_released"]
+[connection signal="pressed" from="TouchScreenButton4" to="." method="_on_TouchScreenButton4_pressed"]
+[connection signal="released" from="TouchScreenButton4" to="." method="_on_TouchScreenButton4_released"]
+[connection signal="pressed" from="TouchScreenButton6" to="." method="_on_TouchScreenButton6_pressed"]
+[connection signal="released" from="TouchScreenButton6" to="." method="_on_TouchScreenButton6_released"]
+[connection signal="pressed" from="TouchScreenButton7" to="." method="_on_TouchScreenButton7_pressed"]
+[connection signal="released" from="TouchScreenButton7" to="." method="_on_TouchScreenButton7_released"]
+[connection signal="pressed" from="TouchScreenButton8" to="." method="_on_TouchScreenButton8_pressed"]
+[connection signal="released" from="TouchScreenButton8" to="." method="_on_TouchScreenButton8_released"]
+[connection signal="pressed" from="GunButton" to="." method="_on_GunButton_pressed"]
+[connection signal="released" from="GunButton" to="." method="_on_GunButton_released"]
+[connection signal="released" from="BIRREADBUTTON" to="." method="_on_BIRREADBUTTON_released"]
+[connection signal="timeout" from="TimeSuperA" to="." method="_on_TimeSuperA_timeout"]
+[connection signal="released" from="SuAt" to="." method="_on_SuAt_released"]
+[connection signal="timeout" from="TimerONSUPER" to="." method="_on_TimerONSUPER_timeout"]

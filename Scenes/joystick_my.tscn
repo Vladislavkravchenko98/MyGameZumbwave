@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/joystick_my.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Buttons/Joystick/1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Buttons/Joystick/3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Buttons/Joystick/0.png" type="Texture" id=4]
+
+[node name="joystick_my" type="Node2D"]
+position = Vector2( 0, -0.594604 )
+scale = Vector2( 1.3, 1.3 )
+script = ExtResource( 1 )
+
+[node name="joystick" type="Sprite" parent="."]
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+
+[node name="R" type="TouchScreenButton" parent="."]
+position = Vector2( 48.9863, -71.7614 )
+scale = Vector2( 0.236783, 0.265537 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "right"
+
+[node name="L" type="TouchScreenButton" parent="."]
+position = Vector2( -169.368, -68.0047 )
+scale = Vector2( 0.227033, 0.256102 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "left"
+
+[node name="U" type="TouchScreenButton" parent="."]
+position = Vector2( -68.3105, -170.23 )
+scale = Vector2( 0.266689, 0.218824 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "up"
+
+[node name="D" type="TouchScreenButton" parent="."]
+position = Vector2( -65.9949, 48.2169 )
+scale = Vector2( 0.250889, 0.217714 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "down"
+
+[node name="SpriteR" type="Sprite" parent="."]
+visible = false
+position = Vector2( 67.2536, -7.86508 )
+scale = Vector2( 0.81, 0.81 )
+texture = ExtResource( 3 )
+
+[node name="SpriteL" type="Sprite" parent="."]
+visible = false
+position = Vector2( -77.6212, -8.08555 )
+scale = Vector2( 0.81, 0.81 )
+texture = ExtResource( 3 )
+
+[node name="SpriteD" type="Sprite" parent="."]
+visible = false
+position = Vector2( -4.85133, 63.0672 )
+scale = Vector2( 0.81, 0.81 )
+texture = ExtResource( 3 )
+
+[node name="SpriteU" type="Sprite" parent="."]
+visible = false
+position = Vector2( -6.14502, -80.532 )
+scale = Vector2( 0.81, 0.81 )
+texture = ExtResource( 3 )
+
+[node name="D2" type="TouchScreenButton" parent="."]
+position = Vector2( -41.1649, 21.9547 )
+scale = Vector2( 0.149436, 0.0545331 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "down"
+
+[node name="R2" type="TouchScreenButton" parent="."]
+position = Vector2( 23.0772, -38.4205 )
+scale = Vector2( 0.0545993, 0.123834 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "right"
+
+[node name="L2" type="TouchScreenButton" parent="."]
+position = Vector2( -62.8285, -37.9632 )
+scale = Vector2( 0.0575629, 0.125814 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "left"
+
+[node name="U2" type="TouchScreenButton" parent="."]
+position = Vector2( -36.1337, -68.5042 )
+scale = Vector2( 0.127702, 0.0644333 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 4 )
+action = "up"
+
+[connection signal="pressed" from="R" to="." method="_on_R_pressed"]
+[connection signal="released" from="R" to="." method="_on_R_released"]
+[connection signal="pressed" from="L" to="." method="_on_L_pressed"]
+[connection signal="released" from="L" to="." method="_on_L_released"]
+[connection signal="pressed" from="U" to="." method="_on_U_pressed"]
+[connection signal="released" from="U" to="." method="_on_U_released"]
+[connection signal="pressed" from="D" to="." method="_on_D_pressed"]
+[connection signal="released" from="D" to="." method="_on_D_released"]
+[connection signal="pressed" from="D2" to="." method="_on_D2_pressed"]
+[connection signal="released" from="D2" to="." method="_on_D2_released"]
+[connection signal="pressed" from="R2" to="." method="_on_R2_pressed"]
+[connection signal="released" from="R2" to="." method="_on_R2_released"]
+[connection signal="pressed" from="L2" to="." method="_on_L2_pressed"]
+[connection signal="released" from="L2" to="." method="_on_L2_released"]
+[connection signal="pressed" from="U2" to="." method="_on_U2_pressed"]
+[connection signal="released" from="U2" to="." method="_on_U2_released"]

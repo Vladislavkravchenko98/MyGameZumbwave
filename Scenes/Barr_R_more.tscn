@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/Turrent_moreR.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Men2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/HP/StickBarricade.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/HP/HPBarricade.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Barr_R_more.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/Barricade_2/Barricade_R.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.9925, 313.111 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 32.1378, 7.50586 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 24.9645, 10.5006 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.27928, 145.538 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8.45457, 309.142 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 35.7144, 0.426239 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 27.9724, 8.77777 )
+
+[node name="Barr" instance=ExtResource( 2 )]
+z_index = -1
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+position = Vector2( -0.793701, 27 )
+texture = ExtResource( 6 )
+
+[node name="HP_bar" parent="." index="1"]
+visible = false
+margin_left = -79.7194
+margin_top = -359.055
+margin_right = 73.2805
+margin_bottom = -298.055
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="HitBox" parent="." index="2"]
+position = Vector2( -40, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2( 71.1957, 22.1547 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox" index="1"]
+position = Vector2( 36.2088, -284.099 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="HitBox" index="2"]
+position = Vector2( 32.5178, 323.392 )
+shape = SubResource( 7 )
+
+[node name="BiteArea" type="Area2D" parent="." index="3"]
+scale = Vector2( 1.50926, 1.67857 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BiteArea" index="0"]
+position = Vector2( 11.9623, 13.0671 )
+shape = SubResource( 2 )
+
+[node name="Coll_Alive" type="CollisionShape2D" parent="." index="4"]
+position = Vector2( 28.2643, 21.6416 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="5"]
+position = Vector2( 1.50369, -289.588 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="6"]
+position = Vector2( -3.56128, 322.864 )
+shape = SubResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="." index="7"]
+position = Vector2( 68.4803, 22.0713 )
+scale = Vector2( 1.561, 1.786 )
+texture = ExtResource( 1 )
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
+[connection signal="area_exited" from="HitBox" to="." method="_on_HitBox_area_exited"]
+[connection signal="area_entered" from="BiteArea" to="." method="_on_BiteArea_area_entered"]
+[connection signal="area_exited" from="BiteArea" to="." method="_on_BiteArea_area_exited"]

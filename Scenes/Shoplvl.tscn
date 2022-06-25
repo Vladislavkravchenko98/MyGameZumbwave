@@ -1,0 +1,357 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Sprites/pointer/pointerL.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/pointer/pointerR.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/forshoplvl/forshoplvl2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/forshoplvl/forshoplvl1.png" type="Texture" id=4]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/forshoplvl/plus2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/forshoplvl/plus1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/pointer/pointerL_pressed.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/pointer/pointerR_pressed.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Button4.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Button5.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/Shoplvl_Button.tres" type="StyleBox" id=12]
+[ext_resource path="res://Style/Shoplvl_Button.tres" type="StyleBox" id=13]
+[ext_resource path="res://Scripts/Button10.gd" type="Script" id=14]
+[ext_resource path="res://Style/Shoplvl_pressed.tres" type="StyleBox" id=15]
+[ext_resource path="res://Scripts/Shoplvl.gd" type="Script" id=16]
+[ext_resource path="res://Sprites/forshoplvl/warningicon.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/forshoplvl/close_button1.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/forshoplvl/close_button2.png" type="Texture" id=19]
+[ext_resource path="res://Music/Button2.wav" type="AudioStream" id=20]
+[ext_resource path="res://Music/Button1.wav" type="AudioStream" id=21]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+outline_size = 1
+font_data = ExtResource( 5 )
+
+[node name="Shoplvl" type="Node2D"]
+script = ExtResource( 16 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2559.0
+margin_bottom = 1436.0
+color = Color( 0.117647, 0.4, 0.490196, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label13" type="Label" parent="."]
+margin_left = 1465.64
+margin_top = 568.612
+margin_right = 1662.64
+margin_bottom = 666.612
+custom_fonts/font = SubResource( 1 )
+text = "1000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PointerL" type="TouchScreenButton" parent="."]
+position = Vector2( 24.7551, 585.925 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 8 )
+script = ExtResource( 14 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PointerL"]
+stream = ExtResource( 21 )
+
+[node name="PointerR" type="TouchScreenButton" parent="."]
+position = Vector2( 2233.16, 587.298 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 9 )
+script = ExtResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PointerR"]
+stream = ExtResource( 21 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 638.408, 769.89 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1618.59, 722.866 )
+texture = ExtResource( 3 )
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 754.544
+margin_top = 433.664
+margin_right = 994.544
+margin_bottom = 481.664
+custom_fonts/font = SubResource( 2 )
+text = "<0/50>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1726.72
+margin_top = 956.915
+margin_right = 1966.72
+margin_bottom = 1004.92
+custom_fonts/font = SubResource( 2 )
+text = "<0/50>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 756.08
+margin_top = 707.615
+margin_right = 996.08
+margin_bottom = 755.615
+custom_fonts/font = SubResource( 2 )
+text = "<0/50>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 755.183
+margin_top = 970.546
+margin_right = 995.183
+margin_bottom = 1018.55
+custom_fonts/font = SubResource( 2 )
+text = "<0/20>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 1726.07
+margin_top = 431.286
+margin_right = 1966.07
+margin_bottom = 479.286
+rect_pivot_offset = Vector2( 182.695, 0 )
+custom_fonts/font = SubResource( 2 )
+text = "<1/50>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 1727.96
+margin_top = 695.29
+margin_right = 1967.96
+margin_bottom = 743.29
+custom_fonts/font = SubResource( 2 )
+text = "<1/50>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 894.546
+margin_top = 69.767
+margin_right = 1794.55
+margin_bottom = 168.767
+custom_fonts/font = SubResource( 2 )
+text = "                           Shop
+                 (basic tools)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1075.51, 393.809 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 1075.95, 660.113 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2( 1077.12, 921.893 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+position = Vector2( 2007.69, 394.522 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+position = Vector2( 2007.69, 658.541 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
+position = Vector2( 2007.3, 920.631 )
+scale = Vector2( 1.05339, 1.01557 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 6 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 2043.0
+margin_right = 2563.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coins" type="Label" parent="."]
+margin_left = 2062.73
+margin_top = 18.5371
+margin_right = 2392.73
+margin_bottom = 66.5371
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Coins: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1083.29
+margin_top = 1267.14
+margin_right = 1573.29
+margin_bottom = 1394.14
+custom_styles/hover = ExtResource( 15 )
+custom_styles/pressed = ExtResource( 15 )
+custom_styles/focus = ExtResource( 15 )
+custom_styles/disabled = ExtResource( 13 )
+custom_styles/normal = ExtResource( 12 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelButton" type="Label" parent="Button"]
+margin_left = 148.44
+margin_top = 41.1
+margin_right = 364.44
+margin_bottom = 89.1
+custom_fonts/font = SubResource( 2 )
+text = "Return"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource( 21 )
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 496.013
+margin_top = 564.657
+margin_right = 693.013
+margin_bottom = 662.657
+custom_fonts/font = SubResource( 1 )
+text = "100 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="."]
+margin_left = 1460.29
+margin_top = 834.318
+margin_right = 1657.29
+margin_bottom = 932.318
+custom_fonts/font = SubResource( 1 )
+text = "100 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="."]
+margin_left = 1466.42
+margin_top = 1096.33
+margin_right = 1663.42
+margin_bottom = 1194.33
+custom_fonts/font = SubResource( 1 )
+text = "1000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="."]
+margin_left = 494.125
+margin_top = 846.836
+margin_right = 691.125
+margin_bottom = 944.836
+custom_fonts/font = SubResource( 1 )
+text = "100 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label12" type="Label" parent="."]
+margin_left = 496.119
+margin_top = 1126.43
+margin_right = 693.119
+margin_bottom = 1224.43
+custom_fonts/font = SubResource( 1 )
+text = "2000 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warning" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1304.43, 643.722 )
+z_index = 3
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="Warning"]
+margin_left = -290.714
+margin_top = -85.6487
+margin_right = 1122.29
+margin_bottom = 199.351
+custom_fonts/font = SubResource( 3 )
+text = " Not enough money
+                     or
+ maximum quantity 
+ of items has been 
+           exceeded"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+margin_right = 2560.0
+margin_bottom = 1441.0
+color = Color( 0, 0, 0, 0.815686 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1500.84, 435.584 )
+z_index = 4
+normal = ExtResource( 18 )
+pressed = ExtResource( 19 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+
+[connection signal="released" from="PointerL" to="PointerL" method="_on_PointerL_released"]
+[connection signal="released" from="PointerR" to="PointerR" method="_on_PointerR_released"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
+[connection signal="released" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_released"]
+[connection signal="released" from="TouchScreenButton3" to="." method="_on_TouchScreenButton3_released"]
+[connection signal="released" from="TouchScreenButton4" to="." method="_on_TouchScreenButton4_released"]
+[connection signal="released" from="TouchScreenButton5" to="." method="_on_TouchScreenButton5_released"]
+[connection signal="released" from="TouchScreenButton6" to="TouchScreenButton6" method="_on_TouchScreenButton6_released"]
+[connection signal="released" from="TouchScreenButton6" to="." method="_on_TouchScreenButton6_released"]
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]
+[connection signal="released" from="Close" to="." method="_on_Close_released"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Sprites/COINS/coins5.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/COINS/coins1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/COINS/coins3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/COINS/coins4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/COINS/coins2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/COINS/coins6.png" type="Texture" id=6]
+[ext_resource path="res://Ttf/07x5-regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Ttf/pixel-unicode-regular.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Coins",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 105
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[node name="Coins" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Anim" type="AnimatedSprite" parent="."]
+position = Vector2( -2.1189, 0.529751 )
+scale = Vector2( 0.713945, 0.711296 )
+frames = SubResource( 1 )
+animation = "Coins"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -568.131
+margin_top = -25.8848
+margin_right = -87.131
+margin_bottom = 104.115
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "COINS/0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = -348.0
+margin_top = 42.0
+margin_right = -177.0
+margin_bottom = 99.0
+tab_size = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Labelrus" type="Label" parent="."]
+visible = false
+margin_left = -572.503
+margin_top = -61.472
+margin_right = -244.503
+margin_bottom = 57.528
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "МОНЕТ/0"
+__meta__ = {
+"_edit_use_anchors_": false
+}

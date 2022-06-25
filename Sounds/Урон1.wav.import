@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Урон1.wav-79b27f5e33d84eb36d03f1eb65dd4e22.sample"
+
+[deps]
+
+source_file="res://Sounds/Урон1.wav"
+dest_files=[ "res://.import/Урон1.wav-79b27f5e33d84eb36d03f1eb65dd4e22.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
